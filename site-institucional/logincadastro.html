@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Acquatec</h1>
+            <ul class="navbar">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pag2.html">Simulador</a></a></li>
+                <li>|</li>
+                <li> <a href="login.html">Login</a></li>
+                <li class="ativo">Cadastro</li>
+            </ul>
+        </div>
+    </div>
+    <span id="cadastrospan" style="display: block;"><h1><b><i>Faça seu cadastro</i></b></h1>
+    <h2><i>Username:</i></h2>
+    <input id="username_cadastro" placeholder="Digite seu username" type="text"><br><br>
+    <h2><i>Senha:</i></h2>
+    <input id="password_cadastro" placeholder="Digite sua senha" type="text"><br><br>
+    <button onclick="cadastro()">cadastro</button></span>
+
+    <span id="loginspan" style="display: none;"><h1><b><i>Entre com sua conta</i></b></h1>
+    <h2><i>Username:</i></h2>
+    <input id="username_login" placeholder="Digite seu username" type="text"><br><br>
+    <h2><i>Senha:</i></h2>
+    <input id="password_login" placeholder="Digite sua senha" type="text"><br><br>
+    <button onclick="login()">Login</button></span>
+</body>
+</html>
+<script>
+    function cadastro() {
+        cadastrospan.style.display = 'none'
+        loginspan.style.display = 'block'
+    }
+    function login() {
+        if(username_login.value == username_cadastro.value && password_login.value == password_cadastro.value){
+            alert('Login efetuado')}
+        else{
+            alert('Senha ou usuário incorretos!')}
+    }
+</script>

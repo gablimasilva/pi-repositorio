@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Acquatec</h1>
+            <ul class="navbar">
+                <li><a href="index.html">Início</a></li>
+                <li> <a href="pag2.html">Simulador</a></li>
+                <li>|</li>
+                <li class="ativo">Login</li>
+                <li> <a href="logincadastro.html">Cadastro</a></li>
+            </ul>
+        </div>
+    </div>
+    <span><h1><b><i>Entre com sua conta</i></b></h1>
+        <h2><i>Username:</i></h2>
+        <input id="username_login" placeholder="Digite seu username" type="text"><br><br>
+        <h2><i>Senha:</i></h2>
+        <input id="password_login" placeholder="Digite sua senha" type="text"><br><br>
+        <button onclick="login()">Login</button></span>
+</body>
+</html>
+<script>
+    function login() {
+        if(username_login.value == '123' && password_login.value == '123')
+        {alert('Login efetuado!')}
+        else{
+            alert('Senha ou usuário incorretos!')
+        }
+    }
+</script>
