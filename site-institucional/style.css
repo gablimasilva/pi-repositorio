@@ -1,5 +1,5 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -9,13 +9,13 @@
     border: aquamarine solid 5px;
 }
 .container{
-    color: aquamarine;
     width: 80%;
-    background-color: black;
-    height: 100px;
+    height: 100%;
     margin: auto;
+
 }
 .header .container {
+    color: aquamarine;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,4 +37,199 @@
 .navbar li a {
     text-decoration: none;
     color: gold;
+}
+
+.banner {
+    height: 500px;
+    background-image: url(http://formasaudavel.com.br/wp-content/uploads/2014/01/rucula-beneficios2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message{
+    margin-right: 250px;
+    width: 12%;
+    color: white;
+    font-size: 35px;
+}
+.message span {
+    font-weight: bolder;
+}
+.proposito{
+    height: 400px;
+    background-color: #E5E5E5
+}
+
+.proposito .container .mvv div img {
+    height: 100px;
+    width: 100px;
+}
+.proposito .container .mvv {
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.proposito .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.proposito .container h2 {
+    color: rgb(194, 12, 43);
+    background-color: white;
+    padding: 25px;
+    border-radius: 25px;
+}
+.proposito .container .mvv div {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.proposito .container .mvv div h3 {
+    color:rgb(194, 12, 43);
+    font-weight: bolder;
+    margin: 25px 0;
+}
+.footer {
+    background-color: aquamarine;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer p{
+    color: black;
+}
+
+img {
+    border-radius: 50%;
+    box-shadow: 5px 10px 10px#406343;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+img:hover{
+    transform: scale(1.2) rotateX(360deg);
+}
+h3{
+    color: #1d2c1b;
+    /* box-shadow: 5px 0px 5px #32502E; */
+}
+button {
+    box-shadow: 5px 2px 10px#406343;
+    color: #fffef9;
+    background-color: #344d36;
+    border-radius: 10%;
+    border-color: #1e301c;
+    transition: transform 2s;
+}
+button:hover {
+    color: #344d36;
+    background-color:#fffef9 ;
+    transform: scale(1.1) ;
+
+}
+.div_img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.div_texto {
+    box-shadow: 5px 5px 10px #406343;
+    height: auto;
+    width: 350px;
+    margin-left: 500px;
+    margin-right: 475px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #32502E;
+}
+body{
+    background: linear-gradient(45deg,  #32502E,#406343, #ECE7B4, #F3EFCC);
+    background-size: 200% 300%;
+    animation: colors 10s ease infinite;
+}
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+#texto_pergunta{
+    text-align: center;
+}
+
+.banner .container .login {
+    background-color: black;
+    height: 300px;
+    width: 400px;
+    border-radius: 25px;
+    border: aquamarine 10px solid;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+.banner .container {
+    padding: 75px 463px;
+}
+
+.banner .container .login input{
+    border-radius: 5px;
+    padding: 5px;
+    border: 3px solid aquamarine;
+}
+.banner .container .login button{
+    padding: 10px;
+    height: 40px;
+    width: 120px;
+}
+.banner2 {
+    height: 650px;
+    background-image: url(http://formasaudavel.com.br/wp-content/uploads/2014/01/rucula-beneficios2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner2 .container2{
+    padding: 25px 463px;
+} 
+.banner2 .container2 .cadastro{
+    background-color: black;
+    border-radius: 25px;
+    border: aquamarine 10px solid;
+    height: 500px;
+    width: 600px;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+.banner2 .container2 .cadastro input{
+    border-radius: 5px;
+    padding: 5px;
+    border: 3px solid aquamarine;
+}
+.banner2 .container2 .cadastro button{
+    padding: 10px;
+    height: 40px;
+    width: 120px;
 }

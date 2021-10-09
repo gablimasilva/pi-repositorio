@@ -10,7 +10,7 @@
 <body>
     <div class="header">
         <div class="container">
-            <h1>Acquatec</h1>
+            <h1>Plantech</h1>
             <ul class="navbar">
                 <li><a href="index.html">Início</a></li>
                 <li class="ativo">Simulador</a></li>
@@ -20,5 +20,46 @@
             </ul>
         </div>
     </div>
+    <div class="div_img">
+        <img src="Logotipo-tech.png" width="150px" alt="Logo Plantech"> <br> <br>
+        <h3>Simulador de Produção - Plantech</h3> <br>
+    </div>
+    <div class="div_texto">
+       <b id="texto_pergunta">Quantos metros quadrados possui sua estufa?</b> <input id="tamanho_estufa" placeholder="ex. 10"><br>
+        <br>
+        <button id="bt_simulacao" onclick="simular()">Simular produção</button><br>
+        <br>
+        <div id="div_simulacao_comum" style="background-color: rgb(178, 219, 245);"></div>
+        <div id="div_simulacao_indoor" style="background-color: rgb(188, 224, 188);"></div>
+        <br>
+    </div>
+    <div class="footer">
+        <p>Feito com amor por um aluno Bandtec 2021 ©</p>
+    </div>
 </body>
 </html>
+<script>
+     function simular() {
+        var ax_estufa = tamanho_estufa.value;
+        // Para calcular, consideramos: 500/m2 e 30 dias produtivos/anual
+        var ax_hidro = Number(500)*tamanho_estufa.value*Number(30)
+        var ax_custo = ax_hidro*Number(0.38);
+        var ax_venda_comum = ax_hidro*Number(1);
+        // Para calcular, consideramos: 500/m2 e 30 dias produtivos/anual
+        var ax_venda_indoor = ax_hidro*Number(1.75);
+            div_simulacao_comum.innerHTML = `<b>Para estufa hidropônica comum, 
+            <br>sua produção será de:</b><br> 
+            <br>${ax_hidro} rúculas por ano em ${ax_estufa} metros quadrados.
+            <br>O custo médio de produção é de R$: ${ax_custo.toFixed(2)} por ano. 
+            <br>O valor médio de venda é de R$ 1.00, gerando:
+            <br> Lucro bruto de R$: ${ax_venda_comum.toFixed(2)}.
+            <br> Lucro líquido de R$: ${(ax_venda_comum-ax_custo).toFixed(2)}</b>.`;
+            div_simulacao_indoor.innerHTML = `<b>Para estufa hidropônica indoor, com os sensores da Plantech, 
+            <br>sua produção será de:</b><br> 
+            <br>${ax_hidro} rúculas por ano em ${ax_estufa} metros quadrados.
+            <br>O custo médio de produção é de R$: ${ax_custo.toFixed(2)} por ano. 
+            <br>O valor médio de venda é de R$ 1.75, gerando:
+            <br> Lucro bruto de R$: ${ax_venda_indoor.toFixed(2)}.
+            <br> Lucro líquido de R$: ${(ax_venda_indoor-ax_custo).toFixed(2)}</b>.`;
+    }
+</script>
